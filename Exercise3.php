@@ -1,4 +1,8 @@
 <?php
+/*
+Link to gitHub pages repository: https://github.com/Ebassani/ebassani.github.io
+Link to page that contains the HTML for the project: https://ebassani.github.io/SpartaGym/Sparta_Gym.html
+*/
 
 $month= date("F");
 if($month == "August") {
@@ -7,7 +11,7 @@ if($month == "August") {
 else{
     echo "Not August, This is " . $month . " so i don't have any holidays";
 }
-echo "<br>";
+echo "<br><br>";
 
 
 $color= "red";
@@ -17,7 +21,7 @@ if($color == "red") {
 else{
     echo "The color is not red.";
 }
-echo "<br>";
+echo "<br><br>";
 
 
 $grade=70;
@@ -37,13 +41,13 @@ elseif($grade>50){
 else{
     echo "Fail";
 }
-echo "<br>";
+echo "<br><br>";
 
 ?>
 
 <form action="Exercise3.php" method="post">
-Name: <input type="text" name="name"><br>
-Age: <input type="number" min=0 name="age"><br>
+Name: <input type="text" name="name" required><br>
+Age: <input type="number" min=0 name="age" required><br>
 <input type="submit" name='submit'>
 </form>
 
@@ -58,8 +62,7 @@ if(isset($_POST['submit'])){
         echo $name . " is NOT eligible for voting";
     }
 }
-echo "<br>";
-echo "<br>";
+echo "<br><br>";
 
 for($x=9;$x>1;$x--){
     for($i=1;$i<$x;$i++){
