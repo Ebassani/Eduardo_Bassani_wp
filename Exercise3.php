@@ -48,11 +48,11 @@ echo "<br><br>";
 <form action="Exercise3.php" method="post">
 Name: <input type="text" name="name" required><br>
 Age: <input type="number" min=0 name="age" required><br>
-<input type="submit" name='submit'>
+<input type="submit">
 </form>
 
 <?php
-if(isset($_POST['submit'])){
+if(isset($_POST['name'])){
     $name= $_POST['name'];
     $age = $_POST['age'];
     if($age>=18){
