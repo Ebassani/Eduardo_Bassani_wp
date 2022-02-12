@@ -100,7 +100,7 @@ foreach($arrayColors as $x => $x_hex) {
 echo "<br>";
 // 7. Include 12 months in an array named month and print them using loop statement.
 
-$month = ("January","February","March","April","May","June","July","August","September"
+$month = array("January","February","March","April","May","June","July","August","September"
 ,"October","November","December");
 foreach($month as $i){
     echo $i . "<br>";
@@ -116,23 +116,23 @@ Recorded temperatures : 78, 60, 62, 68, 71, 68, 73,
 Write comments to explain the following code (when asked):
 */
 
-/*
+
 echo "<hr><h2> Calculation average temperature: </h2>";
 $month_temp = "78, 60, 62, 68, 71, 68, 73, 85, 66, 64, 76, 63, 81, 76, 73,
 68, 72, 73, 75, 65, 74, 63, 67, 65, 64, 68, 73, 75, 79, 73";
-// what is explode and what does the below code do? : 
+// what is explode and what does the below code do?
+// It separates the String into other Strings based on the separator defined as one of the parameters, creating an array of srings
 $temp_array = explode(',', $month_temp);
 $tot_temp = 0;
-// What is count?
+// What is count? Count is a function that returns the amount of elements in an array
 $temp_array_length = count($temp_array);
 foreach($temp_array as $temp)
 {
  $tot_temp += $temp;
 }
  $avg_high_temp = $tot_temp/$temp_array_length;
- echo "Average Temperature is : ".$avg_high_temp."
-"; 
-// what does sort do?
+ echo "Average Temperature is : ".$avg_high_temp.""; 
+// what does sort do? It sorts an array in ascending order, from the smallest element to the largest
 sort($temp_array);
 echo "<br> List of five lowest temperatures :";
 for ($i=0; $i< 5; $i++)
@@ -141,9 +141,11 @@ echo $temp_array[$i].", ";
 }
 echo "<br>List of five highest temperatures :";
 // explain the following loop
+//The value of the variable $i is the length of the array minus five, 
+//that makes the loop start with only the five biggest elements remaining,
+//therefore printing only the highest temperatures.
 for ($i=($temp_array_length-5); $i< ($temp_array_length); $i++)
 {
 echo $temp_array[$i].", ";
 }
-*/
 ?>
